@@ -9,7 +9,7 @@ for await (const req of s)  {
   const page = req.url.includes('/about') ? 'about.html' : 'home.html';
 
   const body = readFileStrSync(`./content/${page}`, { encoding: "utf8" });
-
+  
   const response: Response = {
     headers: new Headers({
       "content-type": "text/html",
